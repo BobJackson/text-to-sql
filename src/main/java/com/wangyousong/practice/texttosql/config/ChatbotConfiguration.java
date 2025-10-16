@@ -1,4 +1,4 @@
-package com.wangyousong.practice.texttosql;
+package com.wangyousong.practice.texttosql.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatModel;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 
 @Configuration
-class ChatbotConfiguration {
+public class ChatbotConfiguration {
 
     @Bean
     PromptTemplate systemPrompt(

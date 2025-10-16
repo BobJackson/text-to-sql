@@ -1,12 +1,13 @@
-package com.wangyousong.practice.texttosql;
+package com.wangyousong.practice.texttosql.service;
 
+import com.wangyousong.practice.texttosql.exception.InvalidQueryException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-class SqlGenerator {
+public class SqlGenerator {
 
     private final ChatClient chatClient;
 
@@ -14,7 +15,7 @@ class SqlGenerator {
         this.chatClient = chatClient;
     }
 
-    String generate(String question) {
+    public String generate(String question) {
         String response = chatClient
             .prompt(question)
             .call()

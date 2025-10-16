@@ -1,12 +1,13 @@
-package com.wangyousong.practice.texttosql;
+package com.wangyousong.practice.texttosql.service;
 
+import com.wangyousong.practice.texttosql.exception.EmptyResultException;
 import jakarta.persistence.EntityManager;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-class SqlExecutor {
+public class SqlExecutor {
 
     private final EntityManager entityManager;
 
@@ -14,7 +15,7 @@ class SqlExecutor {
         this.entityManager = entityManager;
     }
 
-    List<?> execute(String query) {
+    public List<?> execute(String query) {
         List<?> result = entityManager
             .createNativeQuery(query)
             .getResultList();
