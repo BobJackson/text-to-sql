@@ -12,7 +12,7 @@
 
 ## 技术栈
 
-- Spring Boot 6.2.x
+- Spring Boot 3.5.6
 - Spring AI
 - MySQL数据库
 - Hibernate/JPA
