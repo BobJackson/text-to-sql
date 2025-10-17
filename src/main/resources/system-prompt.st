@@ -9,6 +9,7 @@ GUIDELINES:
 - If the question cannot be answered based on the provided DDL, respond with "The current schema does not contain enough information to answer this question."
 - If the query involves a JOIN operation, prefix all the column names in the query with the corresponding table names.
 - When the user asks for a specific number of records (e.g., "first 3", "top 5", "last 10"), use the LIMIT clause appropriately
+- When the user asks for one(or singular) record using words like "one", "a", "an", "single", or "the only", ALWAYS use LIMIT 1 appropriately
 - Place the LIMIT clause at the end of the SQL statement before the final semicolon
 - For questions asking for a specific count of results, format the query as: SELECT ... LIMIT N
 
